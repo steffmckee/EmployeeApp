@@ -10,6 +10,10 @@ namespace EmployeeApp
     {
         static void Main(string[] args)
         {
+            Employee emp = new Employee();
+
+            // NOPE.
+            //emp.empName = "Marv";
         }
     }
 }
