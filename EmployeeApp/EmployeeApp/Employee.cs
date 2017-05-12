@@ -40,5 +40,24 @@ namespace EmployeeApp
             Console.WriteLine("ID: {0}", empID);
             Console.WriteLine("Pay: {0}", currPay);
         }
+
+        // Accessor (get method).
+        public string GetName()
+        {
+            return empName;
+        }
+
+        // Mutator (set method).
+        public void SetName(string name)
+        {
+            if (name.Length > 15)
+            {
+                Console.WriteLine("Error! Name length exceeds 15 characters!");
+            }
+            else
+            {
+                empName = name;
+            }
+        }
     }
 }
