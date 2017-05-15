@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace EmployeeApp
 {
-    class Employee
+    partial class Employee
     {
-        // Field data.
-        private string empName;
-        private int empID;
-        private float currPay;
-        private int empAge;
-
         // Properties
 
         public string Name
@@ -54,23 +48,6 @@ namespace EmployeeApp
             set { empAge = value; }
         }
 
-        // Constructors.
-
-        public Employee()
-        {
-
-        }
-
-        public Employee(string name, int id, float pay) : this(name, 0, id, pay) { }
-
-        public Employee(string name, int age, int id, float pay)
-        {
-            Name = name;
-            Age = age;
-            ID = id;
-            Pay = pay;
-        }
-
         // Methods
 
         public void GiveBonus(float amount)
@@ -84,25 +61,6 @@ namespace EmployeeApp
             Console.WriteLine("ID: {0}", ID);
             Console.WriteLine("Pay: {0}", Pay);
             Console.WriteLine("Age: {0}", Age);
-        }
-
-        // Accessor (get method).
-        public string GetName()
-        {
-            return empName;
-        }
-
-        // Mutator (set method).
-        public void SetName(string name)
-        {
-            if (name.Length > 15)
-            {
-                Console.WriteLine("Error! Name length exceeds 15 characters!");
-            }
-            else
-            {
-                empName = name;
-            }
         }
     }
 }
